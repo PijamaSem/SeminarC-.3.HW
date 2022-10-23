@@ -31,6 +31,26 @@
 // A (3,6,8); B (2,1,-7), -> 15.84
 // A (7,-5, 0); B (1,-1,9) -> 11.53
 
+double Distance (int xa, int ya, int za, int xb, int yb, int zb){
+    double dist=Math.Sqrt((xb-xa)*(xb-xa)+(yb-ya)*(yb-ya)+(za-zb)*(za-zb));
+    return dist;
+}
+Console.WriteLine("Pls enter number xa");
+int xa = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Pls enter number ya");
+int ya = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Pls enter number za");
+int za = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Pls enter number xb");
+int xb = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Pls enter number yb");
+int yb = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Pls enter number zb");
+int zb = Convert.ToInt32(Console.ReadLine());
+
+double dist = Distance(xa,ya, za, xb, yb,zb);
+Console.WriteLine($"Length is {Math.Round(dist,2)}");
+
 // Задача 23
 // Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
 // 3 -> 1, 8, 27
